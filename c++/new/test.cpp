@@ -3,31 +3,25 @@ using namespace std;
 
 class A
 {
-int x;
+char *ptr;
+
 public:
-/*
-A()
+void set_data()
 {
-cout << "default" << endl;
-x = 10;
-}
-*/
-A(int a):x(a)
-{
-cout << "parameterized" << endl;
+ptr = new char[20];
+scanf(" %s",ptr);
 }
 
-void get()
+void get_data()
 {
-cout << "x = " << x << endl;
+cout << ptr << endl;
 }
 };
 
 int main()
 {
-A a1();
-//a1.get();
-A a2(20);
-a2.get();
-return 0;
+A a1;
+a1.set_data();
+a1.get_data();
+
 }
