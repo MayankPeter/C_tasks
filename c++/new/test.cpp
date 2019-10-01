@@ -3,18 +3,18 @@ using namespace std;
 
 class A
 {
-char *ptr;
+string str;
 
 public:
 void set_data()
 {
-ptr = new char[20];
-scanf(" %s",ptr);
+cout << "Enter the string" << endl;
+getline(cin,str);
 }
 
 void get_data()
 {
-cout << ptr << endl;
+cout << str << endl;
 }
 };
 
